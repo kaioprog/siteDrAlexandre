@@ -57,6 +57,54 @@
   scroll-behavior: smooth;
 }
 
+.phone {
+  position: relative;
+  width: 300px;
+  height: 600px;
+  border: 16px black solid;
+  border-top: 60px black solid;
+  border-bottom: 60px black solid;
+  border-radius: 36px;
+  background: #000;
+  overflow: hidden;
+}
+.phone::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 5px;
+  background: #333;
+  border-radius: 10px;
+}
+.phone video {
+  width: 100%;
+  height: 100%;
+}
+
+.buttonQueroSerAluno {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonQueroSerAluno:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: white;
+}
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -1292,6 +1340,7 @@ section,
   transition: 0.3s;
   border-radius: 10px;
   display: flex;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .services .service-item .icon {
@@ -1435,6 +1484,7 @@ section,
   padding: 40px 40px;
   height: 100%;
   border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .pricing h3 {
@@ -1530,7 +1580,7 @@ section,
   position: absolute;
   top: 15px;
   right: 15px;
-  background-color: var(--accent-color);
+  background-color: green;
   color: var(--contrast-color);
   padding: 4px 15px 6px 15px;
   margin: 0;
